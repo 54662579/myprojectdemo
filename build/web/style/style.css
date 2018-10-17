@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-Jun-2018, 10:29:57 AM
+    Author     : Dev
+*/
+body {
+    background-color: #f1f1f1;
+    font-family: sans-serif;
+}
+h1.header {
+    color: whitesmoke;
+    background-color: #62b8ff;
+    border-style: double;
+    border-width: 15px;
+    border-color: white;
+    padding: 50px;
+    margin: 0px;
+}
+
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+}
+
+.vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 15px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+/* Column container */
+.row { 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 10%; /* Set the width of the sidebar */
+    background-color: white; /* Grey background color */
+    padding: 10px; /* Some padding */
+}
+
+/* Main column */
+.main { 
+    flex: 75%; /* Set the width of the main content */
+    background-color: white; /* White background color */
+    padding: 10px; /* Some padding */
+}
+
+h3.header{
+    color: white;
+    background-color: #4CAF50;
+    border-style: double;
+    border-width: 10px;
+    border-color: white;
+    padding: 4px;
+    margin: 0px;
+}
+
+form.login, select, textarea {
+    width: 30%;
+}
+/* Style inputs with type="text", select elements and textareas */
+input, select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}

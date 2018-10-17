@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<web-app>
+
+<!--    <welcome-file-list>
+              <welcome-file>welcomepage.jsp</welcome-file>
+    </welcome-file-list>-->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/public/login.jsp</form-login-page>
+            <form-error-page>/public/errorpage.html</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <role-name>admin</role-name>
+    </security-role>
+    <security-role>
+        <role-name>teacher</role-name>
+    </security-role>
+    <security-role>
+        <role-name>guest</role-name>
+    </security-role>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>public resources</web-resource-name>
+            <url-pattern>/style/*</url-pattern>
+            <url-pattern>/public/*</url-pattern>
+            <http-method>GET</http-method>
+        </web-resource-collection>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>welcome resource</web-resource-name>
+            <url-pattern>/index.jsp</url-pattern>
+            <url-pattern>/logout</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+            <role-name>guest</role-name>
+            <role-name>teacher</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>teacher resource</web-resource-name>
+            <url-pattern>/result_list</url-pattern>
+            <url-pattern>/result_add</url-pattern>
+            <url-pattern>/edit_result/*</url-pattern>
+            <url-pattern>/delete_result/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+            <role-name>teacher</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>admin resource</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+</web-app>
